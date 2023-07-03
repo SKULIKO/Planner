@@ -33,19 +33,21 @@ import java.util.Optional;
 */
 
 @RestController
-@RequestMapping("/user") // базовый URI
-public class UserController {
+@RequestMapping("/admin/user") // базовый URI
+public class AdminController {
 
     public static final String ID_COLUMN = "id"; // имя столбца id
     private final UserService userService; // сервис для доступа к данным (напрямую к репозиториям не обращаемся)
+
     private UserWebClientBuilder userWebClientBuilder;
     private MessageProducer messageProducer;
+
 
     // используем автоматическое внедрение экземпляра класса через конструктор
     // не используем @Autowired ля переменной класса, т.к. "Field injection is not recommended "
 
 
-    public UserController(UserService userService, UserWebClientBuilder userWebClientBuilder, MessageProducer messageProducer) {
+    public AdminController(UserService userService, UserWebClientBuilder userWebClientBuilder, MessageProducer messageProducer) {
         this.userService = userService;
         this.userWebClientBuilder = userWebClientBuilder;
         this.messageProducer = messageProducer;

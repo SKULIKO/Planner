@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import ru.javabegin.micro.planner.entity.User;
 
-@FeignClient(name = "planner-users",fallback = UserFeignClientFallback.class)
+@FeignClient(name = "planner-users", fallback = UserFeignClientFallback.class)
 public interface UserFeignClient {
 
     @PostMapping("/user/id")
@@ -15,10 +15,12 @@ public interface UserFeignClient {
 }
 
 @Component
-class UserFeignClientFallback implements UserFeignClient{
-// этот метод будет вызываться если user сервис не будет доступен
+class UserFeignClientFallback implements UserFeignClient {
+
+    // этот метод будет вызываться, если сервис /user/id не будет доступен
     @Override
     public ResponseEntity<User> findUserById(Long id) {
         return null;
     }
 }
+

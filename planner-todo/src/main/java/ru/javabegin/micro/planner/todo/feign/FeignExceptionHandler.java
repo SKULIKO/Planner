@@ -4,6 +4,7 @@ import com.google.common.io.CharStreams;
 import feign.Response;
 import feign.codec.ErrorDecoder;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.StreamingHttpOutputMessage;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -13,31 +14,44 @@ import java.nio.charset.Charset;
 
 @Component
 public class FeignExceptionHandler implements ErrorDecoder {
+
+    // вызывается каждый раз при ошибке вызова через Feign
     @Override
     public Exception decode(String methodKey, Response response) {
-       switch (response.status()){
-           case 406:{
-             return new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE,readMessage(response));
-         }
-       }
+
+        switch (response.status()) {
+            case 406: {
+                return new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE, readMessage(response));
+            }
+        }
+
         return null;
     }
-    private String readMessage(Response response){
-        String massage= null;
-        Reader reader= null;
+
+    // получить текст ошибки в формате String из потока
+    private String readMessage(Response response) {
+
+        String message = null;
+        Reader reader = null;
+
         try {
+
             reader = response.body().asReader(Charset.defaultCharset());
-            massage= CharStreams.toString(reader);
-        } catch (IOException e){
+            message = CharStreams.toString(reader);
+
+        } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if (reader!= null)
+                if (reader != null)
                     reader.close();
-            }catch (IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        return massage;
+
+        return message;
     }
+
 }
+

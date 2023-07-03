@@ -22,6 +22,7 @@ public interface PriorityRepository extends JpaRepository<Priority, Long> {
             " or lower(p.title) like lower(concat('%', :title,'%'))) " + // если параметр title не пустой, то выполнится уже это условие
             " and p.userId=:id " + // фильтрация для конкретного пользователя
             "order by p.title asc") // сортировка по названию
-    List<Priority> findByTitle(@Param("title") String title, @Param("id") Long id);
+    List<Priority> findByTitle(@Param("title") String title, @Param("id") String id);
 
+    List<Priority> findByUserIdOrderByIdAsc(String userId);
 }

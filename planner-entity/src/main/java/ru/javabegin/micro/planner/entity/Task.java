@@ -1,7 +1,6 @@
 package ru.javabegin.micro.planner.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -58,7 +57,7 @@ public class Task implements Serializable {
 //    private User user; // для какого пользователя задача
 
     @Column(name="user_id")
-    private Long userId;
+    private String userId;
 
     @Override
     public boolean equals(Object o) {

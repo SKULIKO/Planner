@@ -6,9 +6,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 import ru.javabegin.micro.planner.entity.Task;
-import ru.javabegin.micro.planner.todo.feign.UserFeignClient;
 import ru.javabegin.micro.planner.todo.search.TaskSearchValues;
 import ru.javabegin.micro.planner.todo.service.TaskService;
 import ru.javabegin.micro.planner.utils.resttemplate.UserRestBuilder;
@@ -43,7 +44,6 @@ public class TaskController {
 
     // микросервисы для работы с пользователями
     private UserRestBuilder userRestBuilder;
-    private UserFeignClient userFeignClient;
 
     // используем автоматическое внедрение экземпляра класса через конструктор
     // не используем @Autowired ля переменной класса, т.к. "Field injection is not recommended "
@@ -55,13 +55,15 @@ public class TaskController {
 
     // получение всех данных
     @PostMapping("/all")
-    public ResponseEntity<List<Task>> findAll(@RequestBody Long userId) {
+    public ResponseEntity<List<Task>> findAll(@RequestBody String userId) {
         return ResponseEntity.ok(taskService.findAll(userId)); // поиск всех задач конкретного пользователя
     }
 
     // добавление
     @PostMapping("/add")
-    public ResponseEntity<Task> add(@RequestBody Task task) {
+    public ResponseEntity<Task> add(@RequestBody Task task, @AuthenticationPrincipal Jwt jwt) {
+
+        task.setUserId(jwt.getSubject()); // UUID пользователя из KeyCloak
 
         // проверка на обязательные параметры
         if (task.getId() != null && task.getId() != 0) {
@@ -74,13 +76,11 @@ public class TaskController {
             return new ResponseEntity("missed param: title", HttpStatus.NOT_ACCEPTABLE);
         }
 
-        // если такой пользователь существует
-//        if (userRestBuilder.userExists(task.getUserId())) { // вызываем микросервис из другого модуля
-//            return ResponseEntity.ok(taskService.add(task)); // возвращаем добавленный объект с заполненным ID
-//        }
-        if (userFeignClient.findUserById(task.getUserId()) != null){
-            return ResponseEntity.ok(taskService.add(task));
+        // если передали UUID пользователя
+        if (!task.getUserId().isBlank()) { // вызываем микросервис из другого модуля
+            return ResponseEntity.ok(taskService.add(task)); // возвращаем добавленный объект с заполненным ID
         }
+
         // если пользователя НЕ существует
         return new ResponseEntity("user id=" + task.getUserId() + " not found", HttpStatus.NOT_ACCEPTABLE);
 
@@ -147,7 +147,9 @@ public class TaskController {
 
     // поиск по любым параметрам TaskSearchValues
     @PostMapping("/search")
-    public ResponseEntity<Page<Task>> search(@RequestBody TaskSearchValues taskSearchValues) throws ParseException {
+    public ResponseEntity<Page<Task>> search(@RequestBody TaskSearchValues taskSearchValues,@AuthenticationPrincipal Jwt jwt) throws ParseException{
+
+        taskSearchValues.setUserId(jwt.getSubject());
 
         // все заполненные условия проверяются одновременно (т.е. И, а не ИЛИ)
         // это можно изменять в запросе репозитория
@@ -166,13 +168,13 @@ public class TaskController {
 
         Integer pageNumber = taskSearchValues.getPageNumber() != null ? taskSearchValues.getPageNumber() : null;
         Integer pageSize = taskSearchValues.getPageSize() != null ? taskSearchValues.getPageSize() : null;
+String userId = taskSearchValues.getUserId();
+      //  String userId = taskSearchValues.getUserId() != null ? taskSearchValues.getUserId() : null; // для показа задач только этого пользователя
 
-        Long userId = taskSearchValues.getUserId() != null ? taskSearchValues.getUserId() : null; // для показа задач только этого пользователя
-
-        // проверка на обязательные параметры
-        if (userId == null || userId == 0) {
-            return new ResponseEntity("missed param: user id", HttpStatus.NOT_ACCEPTABLE);
-        }
+//        // проверка на обязательные параметры
+//        if (userId == null || userId == 0) {
+//            return new ResponseEntity("missed param: user id", HttpStatus.NOT_ACCEPTABLE);
+//        }
 
 
         // чтобы захватить в выборке все задачи по датам, независимо от времени - можно выставить время с 00:00 до 23:59
