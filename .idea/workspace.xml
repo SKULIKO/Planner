@@ -5,57 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6eab4aba-9571-4106-8b83-a53edac80eb3" name="Changes" comment="новые настройки">
-      <change afterPath="$PROJECT_DIR$/.idea/GrepConsole.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/security/SpringSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/planner-users/src/main/java/ru/javabegin/micro/planner/users/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/planner-users/src/main/java/ru/javabegin/micro/planner/users/security/SpringSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/planner-utils/src/main/java/ru/javabegin/micro/planner/utils/converter/KCRoleConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-config/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/planner-config/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Priority.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Priority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Stat.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Stat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-entity/src/main/java/ru/javabegin/micro/planner/entity/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/planner-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/planner-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/PlannerTodoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/PlannerTodoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/PriorityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/PriorityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/StatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/StatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/TestDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/controller/TestDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/feign/FeignExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/feign/FeignExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/feign/UserFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/feign/UserFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/mq/MessageConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/mq/TodoBinding.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/repo/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/repo/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/repo/PriorityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/repo/PriorityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/repo/StatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/repo/StatRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/repo/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/repo/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/search/CategorySearchValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/search/CategorySearchValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/search/PrioritySearchValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/search/PrioritySearchValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/search/TaskSearchValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/search/TaskSearchValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/PriorityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/PriorityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/StatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/StatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/TestDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/java/ru/javabegin/micro/planner/todo/service/TestDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-todo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/planner-todo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-users/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/planner-users/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-users/src/main/java/ru/javabegin/micro/planner/users/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/planner-users/src/main/java/ru/javabegin/micro/planner/users/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-users/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/planner-users/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planner-utils/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/planner-utils/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +64,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "spring.configuration.checksum": "40853a6040d6b62fb9d5fdd667fcf730",
     "vue.rearranger.settings.migration": "true"
   }
@@ -225,7 +175,7 @@
       <workItem from="1687361306916" duration="5005000" />
       <workItem from="1687462779223" duration="876000" />
       <workItem from="1687463745486" duration="1272000" />
-      <workItem from="1688046365279" duration="8708000" />
+      <workItem from="1688046365279" duration="9460000" />
     </task>
     <task id="LOCAL-00001" summary="новые настройки">
       <created>1686772214323</created>
@@ -293,5 +243,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
